@@ -22,12 +22,12 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "type": "TEXT",
-    "name": "jsUrl",
-    "displayName": "Javascript path",
+    "notSetText": "Required field to make Qualaroo work.",
+    "displayName": "Script path",
     "simpleValueType": true,
-    "valueHint": "Click Yellow \"Install Code\" button to get the correct path.",
-    "notSetText": "Required field to make Qualaroo work."
+    "name": "jsUrl",
+    "type": "TEXT",
+    "valueHint": "Click Yellow \"Install Code\" button to get the correct path."
   },
   {
     "simpleValueType": true,
@@ -36,27 +36,27 @@ ___TEMPLATE_PARAMETERS___
     "type": "CHECKBOX",
     "subParams": [
       {
-        "type": "RADIO",
-        "name": "identifier",
         "displayName": "Get your's user's identity attribute by:",
+        "simpleValueType": true,
+        "name": "identifier",
+        "type": "RADIO",
         "radioItems": [
           {
-            "value": "fromDataLayer",
             "displayValue": "by data layer variable",
+            "help": "Data Layer Variable being accessed",
+            "value": "fromDataLayer",
             "subParams": [
               {
-                "type": "TEXT",
-                "name": "dataLayerVariable",
+                "notSetText": "qualaroo.*",
                 "displayName": "",
                 "simpleValueType": true,
-                "valueHint": "qualaroo.*",
-                "notSetText": "qualaroo.*"
+                "name": "dataLayerVariable",
+                "type": "TEXT",
+                "valueHint": "qualaroo.*"
               }
-            ],
-            "help": "Data Layer Variable being accessed"
+            ]
           }
         ],
-        "simpleValueType": true,
         "subParams": []
       }
     ]
@@ -143,7 +143,58 @@ ___WEB_PERMISSIONS___
         "publicId": "access_globals",
         "versionId": "1"
       },
-      "param": []
+      "param": [
+        {
+          "key": "keys",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "_kiq"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
     },
     "isRequired": true
   }
@@ -195,7 +246,6 @@ if (queryPermission('inject_script', data.jsUrl)) {
 }
 
 
-
 ___NOTES___
 
-Created on 20.08.2019, 15:55:50
+Created on 23.08.2019, 11:44:10
