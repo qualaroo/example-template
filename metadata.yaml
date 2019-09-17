@@ -1,0 +1,5 @@
+homepage: "https://qualaroo.com/",
+documentation: "https://help.qualaroo.com/hc/en-us/articles/201405386-Installing-the-JavaScript-using-Google-Tag-Manager",
+versions:
+  - sha: 8cf0a40c2950bc19f15e8ce1fd72328db1a9810c
+    changeNotes: Initial Version
