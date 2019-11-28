@@ -3,3 +3,5 @@ documentation: "https://help.qualaroo.com/hc/en-us/articles/201405386-Installing
 versions:
   - sha: 5149507afdf8f579d99fcb5f2142e50ce0ed2c66
     changeNotes: Initial Version
+  - sha: fd8e1240464055a6f1199f9f2a04c1bd85d07d5a
+    changeNotes: Changed Main Description
