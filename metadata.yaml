@@ -5,3 +5,5 @@ versions:
     changeNotes: Initial Version
   - sha: fd8e1240464055a6f1199f9f2a04c1bd85d07d5a
     changeNotes: Changed Main Description
+  - sha: 6d0aa6fda726616b4f70e0627dd18c828a9758c1
+    changeNotes: Changed jsUrl hint and label
