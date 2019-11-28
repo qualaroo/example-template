@@ -9,7 +9,7 @@ ___INFO___
 
 {
   "displayName": "Qualaroo",
-  "description": "Automatically works for both http and https pages Asynchronous loading so it won’t slow down your site",
+  "description": "This tag enables you to run Qualaroo Nudges on your website.\n\n○ Automatically works for both http and https pages.\n○ Asynchronous loading so it won\u0027t slow down your site.",
   "categories": ["SURVEY", "EXPERIMENTATION", "LEAD_GENERATION"],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
