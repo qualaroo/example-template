@@ -31,11 +31,11 @@ ___TEMPLATE_PARAMETERS___
 [
   {
     "notSetText": "Required field to make Qualaroo work.",
-    "displayName": "Script path",
+    "displayName": "Qualaroo link",
     "simpleValueType": true,
     "name": "jsUrl",
     "type": "TEXT",
-    "valueHint": "Click Yellow \"Install Code\" button to get the correct path."
+    "valueHint": "e.g. https://cl.qualaroo.com/ki.js/ID/UID.js"
   },
   {
     "simpleValueType": true,
