@@ -39,34 +39,18 @@ ___TEMPLATE_PARAMETERS___
     "lineCount": 2
   },
   {
-    "simpleValueType": true,
-    "name": "identity",
-    "checkboxText": "Identify your nudge respondents",
     "type": "CHECKBOX",
+    "name": "identifyViaDataLayer",
+    "checkboxText": "Identify your nudge respondents via GTM Data Layer variable",
+    "simpleValueType": true,
     "subParams": [
       {
-        "displayName": "Get your's user's identity attribute by:",
+        "type": "TEXT",
+        "name": "dataLayerVariable",
+        "displayName": "Specify your Data Layer variable - it should start with \u0027qualaroo.\u0027:",
         "simpleValueType": true,
-        "name": "identifier",
-        "type": "RADIO",
-        "radioItems": [
-          {
-            "displayValue": "by data layer variable",
-            "help": "Data Layer Variable being accessed",
-            "value": "fromDataLayer",
-            "subParams": [
-              {
-                "notSetText": "qualaroo.*",
-                "displayName": "",
-                "simpleValueType": true,
-                "name": "dataLayerVariable",
-                "type": "TEXT",
-                "valueHint": "qualaroo.*"
-              }
-            ]
-          }
-        ],
-        "subParams": []
+        "valueHint": "qualaroo.*",
+        "lineCount": 2
       }
     ]
   }
