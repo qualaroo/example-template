@@ -9,3 +9,5 @@ versions:
     changeNotes: Changed jsUrl hint and label
   - sha: 87fd805199e24daa270e53bca84a302bc68e3355
     changeNotes: Changed jsUrl label and added line count
+  - sha: 7e5df3ce35480273190d1558c01f3fe21a2edfa5
+    changeNotes: Updated identifying responders via GTM Data Layer variable settings
