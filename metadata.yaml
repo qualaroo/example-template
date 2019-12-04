@@ -1,6 +1,8 @@
 homepage: "https://qualaroo.com/",
 documentation: "https://help.qualaroo.com/hc/en-us/articles/201405386-Installing-the-JavaScript-using-Google-Tag-Manager",
 versions:
+  - sha: a85089758c4fac02e5100fa0b682b0d0ebc507b6
+    changeNotes: Updated identifying responders condition
   - sha: 7e5df3ce35480273190d1558c01f3fe21a2edfa5
     changeNotes: Updated identifying responders via GTM Data Layer variable settings
   - sha: 87fd805199e24daa270e53bca84a302bc68e3355
