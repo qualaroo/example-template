@@ -206,7 +206,7 @@ const kiq_permission = queryPermission('access_globals', 'readwrite', '_kiq');
 const _kiq = kiq_permission ? createQueue('_kiq') : [];
 
 const identifyUsers = () => {
-  if (data.identity && data.identifier === 'fromDataLayer') {
+  if (data.identifyViaDataLayer) {
     const permission = queryPermission('read_data_layer', data.dataLayerVariable);
     const identifier = copyFromDataLayer(data.dataLayerVariable);
 
