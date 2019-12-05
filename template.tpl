@@ -203,19 +203,22 @@ const copyFromDataLayer = require('copyFromDataLayer');
 const createQueue = require('createQueue');
 
 const kiq_permission = queryPermission('access_globals', 'readwrite', '_kiq');
-const _kiq = kiq_permission ? createQueue('_kiq') : [];
+const _kiq = createQueue('_kiq');
 
 const identifyUsers = () => {
   if (data.identifyViaDataLayer) {
     const permission = queryPermission('read_data_layer', data.dataLayerVariable);
     const identifier = copyFromDataLayer(data.dataLayerVariable);
 
+    if (identifier == undefined) {
+      logToConsole('Qualaroo: Identity recognition failed due to missing identifier.');
+      return;
+    }
+
     if (permission && identifier) {
-      if (kiq_permission) {
-        _kiq({'identify': identifier});
-      } else {
-        _kiq.push(['identify', identifier]);
-      }
+      _kiq(['identify', identifier]);
+    } else {
+      logToConsole('Qualaroo: Identity recognition failed due to permissions mismatch.');
     }
   }
 };
